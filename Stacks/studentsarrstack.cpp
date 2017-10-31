@@ -14,7 +14,7 @@ AStack::~AStack() {
 
 void AStack::pushBack(float value) {
     if(_size == _capacity){
-        float tmpArr[_capacity];
+        float *tmpArr = new float[_capacity];
         for(int i = 0; i < _size; i++){
             tmpArr[i] = _theArr[i];
         }
