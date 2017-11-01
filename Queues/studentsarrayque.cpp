@@ -2,38 +2,33 @@
 #include "assert.h"
 
 
-AQue::AQue()
-{
+AQue::AQue() {
+    _size = 0;
+    _capacity = 10;
+}
+
+AQue::~AQue() {
 
 }
 
-AQue::~AQue()
-{
+
+void AQue::pushBack(float value) {
 
 }
 
-
-void AQue::pushBack(float value)
-{
-
-}
-
-float &AQue::back()
-{
+float &AQue::back() {
 
 
 }
 
-void AQue::popFront()
-{
+void AQue::popFront() {
 
 }
 
-float &AQue::front()
-{
+float &AQue::front() {
 
 }
 
-int AQue::size()
-{
+int AQue::size() {
+    return _size;
 }
