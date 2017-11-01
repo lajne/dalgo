@@ -1,0 +1,25 @@
+För att starta ett nytt projekt. 
+- Antingen ladda upp filer på github.
+- Eller skapa filer och sedan ladda upp på github.
+
+Clone befintligt githubrepo.
+- Clone URL från repo i github. 
+!!!!!Se till att vara där du vill vara i filhierarkin i bash-terminalen innan du gör detta!!!!!
+	- "$ cd" dig fram till stället du vill skapa clonen på.
+	- "$ git clone <url>"
+		- Kolla lite info i repot: 
+			- $ git remote -v
+			- $ git branch -a
+			- $ git status
+			- $ git diff (lokalt)
+		- Adda till stage:
+			- $ git add -A (allt o-addat)
+		- Committa
+			- $ git commit -m "Vad committen innehöll"
+		- Pulla
+			- $ git pull origin master
+			- $ git push origin master			
+
+
+Om någon eller du lagt in nya filer i repo som du inte har på din dator men du har clonat:
+	- $ git pull origin master (då ska du få allt som gjorts i repot sen du senast pullade)
