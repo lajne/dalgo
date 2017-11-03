@@ -51,15 +51,9 @@ void exempelkodDemonstrerarDeque(){
 
 void nonRecursiveFillStack(int r, int k, IDrawingParent *im, QColor colorOld, QColor colorNew){
 
-    // Nedanstående kod är felakrig och skall tas bort
-    exempelkodDemonstrerarDeque();
-
 }
 
 
 void nonRecursiveFillFifo(int r, int k, IDrawingParent *im, QColor colorOld, QColor colorNew){
-    // Nedanstående kod är felakrig och skall tas bort
-    exempelkodDemonstrerarDeque();
-
 
 }
