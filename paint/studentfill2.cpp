@@ -51,9 +51,39 @@ void exempelkodDemonstrerarDeque(){
 
 void nonRecursiveFillStack(int r, int k, IDrawingParent *im, QColor colorOld, QColor colorNew){
 
+    //exempelkodDemonstrerarDeque();
+
+    deque<RK> stack;
+    stack.push_back(RK(r, k));
+    while (!stack.empty()) {
+        RK rk = stack.back();
+        stack.pop_back();
+        if(im->isInside(r, k) && colorOld == colorNew){
+            qDebug() << rk._r;
+            qDebug() << rk._k;
+            colorOld = colorNew;
+            stack.push_back(RK(r+1, k));
+            stack.push_back(RK(r-1, k));
+            stack.push_back(RK(r, k+1));
+            stack.push_back(RK(r, k-1));
+            im->setPixel(r+1, k, colorOld);
+            im->setPixel(r-1, k, colorOld);
+            im->setPixel(r, k+1, colorOld);
+            im->setPixel(r, k-1, colorOld);
+            stack.pop_back();
+        }
+    }
+
+
+    /*
+     * im .pixel
+     * im .isInside
+     * im .setPixel
+     * */
 }
 
 
 void nonRecursiveFillFifo(int r, int k, IDrawingParent *im, QColor colorOld, QColor colorNew){
 
+    exempelkodDemonstrerarDeque();
 }
