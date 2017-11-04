@@ -8,6 +8,6 @@ void studentstest(){
     // skriv din egen testkod här, och anropa sedan ragnarstest
 
 
-    ragnarsTest("Homer 122");
+    ragnarsTest("ALexander 0351");
 }
 
