@@ -21,7 +21,8 @@ void flashPreOrder(Node *pTree){
 }
 
 void flashInOrder(Node *pTree){
-
+    if(pTree == nullptr)
+        return;
     flashInOrder(pTree->_pLeft);
     pTree->flash();
     flashInOrder(pTree->_pRight);
@@ -49,15 +50,48 @@ void flashNodesAtIncreasingDepth(Node *pTree){
     // så här avlägsnar du det främsta värdet från kön
     // que.pop_front();
 
+    if (pTree == nullptr)
+        return;
 
+    std::deque<Node*> que;
+    int nodesInCurr = 1;
+    int nodesInNext = 0;
+
+    que.push_back( pTree );
+
+    while (!que.empty()) {
+        Node *p = que.front();
+        que.pop_front();
+        nodesInCurr--;
+        if( p ){
+            p->flash();
+            que.push_back(p->_pLeft);
+            que.push_back(p->_pRight);
+            nodesInNext += 2;
+        }
+        if(nodesInCurr == 0){
+            nodesInCurr = nodesInNext;
+            nodesInNext = 0;
+        }
+    }
 }
 
 int numberOfNodes(Node *pTree){
-    return 0;
+    return (pTree == nullptr ? 0: 1 + numberOfNodes(pTree->_pLeft) + numberOfNodes(pTree->_pRight));
 }
 
+//.............//.............//.............//.............//..............GÖR DENNA SKITEN.............//.............//.............//.............//.............//.............//
 int height(Node *pTree){
     return 0;
 }
+
+
+
+
+
+
+
+
+
 
 
