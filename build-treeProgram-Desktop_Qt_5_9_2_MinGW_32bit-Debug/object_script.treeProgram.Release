@@ -1,0 +1,14 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\treeviewwidget.o
+./release\node.o
+./release\visualnode.o
+./release\student1.o
+./release\student2.o
+./release\student3.o
+./release\student4.o
+./release\qrc_resources.o
+./release\moc_mainwindow.o
+./release\moc_treeviewwidget.o
+);

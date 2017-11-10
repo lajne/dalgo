@@ -368,7 +368,7 @@ void TreeViewWidget::removeKeyFromSearchtree(int key)
 void TreeViewWidget::insertMultipleRandomKeysToSearchtree(int numberOfKeysToInsert)
 {
     for (int i=0;i<numberOfKeysToInsert; i+=1){
-        ::insertKeyToSearchtree(_pRoot, random() % 1000);
+        ::insertKeyToSearchtree(_pRoot, rand() % 1000);
     }
 
     animateTheChange();
@@ -376,7 +376,7 @@ void TreeViewWidget::insertMultipleRandomKeysToSearchtree(int numberOfKeysToInse
 void TreeViewWidget::removeMultipleRandomKeysFromSearchtree(int numberOfKeysToInsert)
 {
     for (int i=0;i<numberOfKeysToInsert; i+=1){
-        ::removeKeyFromSearchtree(_pRoot, random() % 1000);
+        ::removeKeyFromSearchtree(_pRoot, rand() % 1000);
     }
 
     animateTheChange();
@@ -386,8 +386,8 @@ void TreeViewWidget::removeMultipleRandomKeysFromSearchtree(int numberOfKeysToIn
 void TreeViewWidget::insertRemoveRandomkeys(int nbrIterations)
 {
     for (int i=0;i<nbrIterations; i+=1){
-        ::insertKeyToSearchtree(_pRoot, random() % 1000);
-        ::removeKeyFromSearchtree(_pRoot, random() % 1000);
+        ::insertKeyToSearchtree(_pRoot, rand() % 1000);
+        ::removeKeyFromSearchtree(_pRoot, rand() % 1000);
     }
 
     animateTheChange();
