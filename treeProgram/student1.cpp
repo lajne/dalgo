@@ -80,9 +80,17 @@ int numberOfNodes(Node *pTree){
     return (pTree == nullptr ? 0: 1 + numberOfNodes(pTree->_pLeft) + numberOfNodes(pTree->_pRight));
 }
 
-//.............//.............//.............//.............//..............GÖR DENNA SKITEN.............//.............//.............//.............//.............//.............//
 int height(Node *pTree){
-    return 0;
+    pTree->flash();
+    if(pTree == nullptr)
+        return -1;
+    int left = height(pTree->_pLeft);
+    int right = height(pTree->_pRight);
+
+    if(left > right)
+        return left + 1;
+    else
+        return right + 1;
 }
 
 
