@@ -23,3 +23,9 @@ Clone befintligt githubrepo.
 
 Om någon eller du lagt in nya filer i repo som du inte har på din dator men du har clonat:
 	- $ git pull origin master (då ska du få allt som gjorts i repot sen du senast pullade)
+
+
+Borttagna filer/mappar:
+	- Använd (om bara de är ändrade) 
+		- $ git add -u
+		- $ git commit -m "msg"
