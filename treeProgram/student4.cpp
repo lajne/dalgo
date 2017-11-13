@@ -12,15 +12,12 @@
  **************************************************************************/
 
 bool didIndicatePathToTarget(Node *pTree){
-    int targetKey = 0;
+    int targetKey = pTree->_key;
     if(pTree == nullptr)
         return false;
     pTree->flash();
-    didIndicatePathToTarget(pTree->_pLeft);
-    didIndicatePathToTarget(pTree->_pRight);
     if(pTree->isTarget()){
         pTree->makeRed();
-        targetKey = pTree->_key;
     }
     if(targetKey < pTree->_key){
         pTree->makeRed();
