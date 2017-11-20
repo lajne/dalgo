@@ -9,6 +9,7 @@ AStack::AStack() {
 }
 
 AStack::~AStack() {
+    //[] vid delete
     delete _theArr;
 }
 
@@ -28,7 +29,6 @@ void AStack::pushBack(float value) {
     _theArr[_size] = value;
     _size++;
 }
-
 
 float &AStack::back() {
     return _theArr[_size-1];

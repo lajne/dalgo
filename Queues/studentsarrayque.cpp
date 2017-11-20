@@ -13,7 +13,6 @@ AQue::~AQue() {
     delete [] _theArr;
 }
 
-
 void AQue::pushBack(float value) {
     _theArr[(_size + _indexOfFront) % _capacity] = value;
     _size++;

@@ -28,7 +28,7 @@ void LStack::popBack() {
     assert(_size > 0);
     Link *pTemp = _pBack;
     _pBack = _pBack->_pLinkNext;
-    delete &pTemp;
+    delete pTemp;
     _size--;
 }
 

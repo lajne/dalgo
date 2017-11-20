@@ -47,8 +47,6 @@ void exempelkodDemonstrerarDeque(){
 
 }
 
-
-
 void nonRecursiveFillStack(int r, int k, IDrawingParent *im, QColor colorOld, QColor colorNew){
 
     deque<RK> stack;
@@ -70,7 +68,6 @@ void nonRecursiveFillStack(int r, int k, IDrawingParent *im, QColor colorOld, QC
         }
     }
 }
-
 
 void nonRecursiveFillFifo(int r, int k, IDrawingParent *im, QColor colorOld, QColor colorNew){
 
