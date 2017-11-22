@@ -12,17 +12,25 @@ MinHeap::MinHeap(int sizeOfArray)
 
 
 void MinHeap::insert(int data){
-    assert( !isFull() );   // krascha om full
+    assert( !isFull() );
 
-    // TODO !!
+    _size += 1;
+    int ixHole = _size;
 
+    while (ixHole > 1 && _theArray[ixHole/2] > data) {
+        _theArray[ixHole] = _theArray[ixHole/2];
+        ixHole /= 2;
+    }
+    _theArray[ixHole] = data;
 }
 
 void MinHeap::deleteMin()
 {
     assert( !isEmpty() );
 
-    // TODO !!
+    _theArray[1] = _theArray[_size];
+    --_size;
+    percolateDown(1);
 
 }
 
@@ -30,13 +38,24 @@ int MinHeap::min()
 {
     assert( _size>0);
 
-    // TODO !!
+    return _theArray[1];
 
 }
 
 void MinHeap::percolateDown(int ix)
 {
-    // TODO !!
+    int value = _theArray[ix];
+
+    while( ix*2 <= _size ){
+        int ixKid = ix*2;
+        if (ixKid != _size && _theArray[ixKid+1] < _theArray[ixKid])
+            ++ixKid;
+        if (_theArray[ixKid] >= value)
+            break;
+        _theArray[ix] = _theArray[ixKid];
+        ix = ixKid;
+    }
+    _theArray[ix] = value;
 
 }
 
