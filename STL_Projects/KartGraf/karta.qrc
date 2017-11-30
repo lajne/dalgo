@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>texter/usaxy.txt</file>
+        <file>texter/usalinks.txt</file>
+    </qresource>
+</RCC>
