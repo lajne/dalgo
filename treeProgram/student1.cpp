@@ -54,34 +54,52 @@ void flashNodesAtIncreasingDepth(Node *pTree){
         return;
 
     std::deque<Node*> que;
-    int nodesInCurr = 1;
-    int nodesInNext = 0;
+
 
     que.push_back( pTree );
 
     while (!que.empty()) {
         Node *p = que.front();
         que.pop_front();
-        nodesInCurr--;
         if( p ){
             p->flash();
             que.push_back(p->_pLeft);
             que.push_back(p->_pRight);
-            nodesInNext += 2;
         }
-        if(nodesInCurr == 0){
-            nodesInCurr = nodesInNext;
-            nodesInNext = 0;
-        }
+
     }
 }
+/*
+if (pTree == nullptr)
+    return;
 
+std::deque<Node*> que;
+int nodesInCurr = 1;
+int nodesInNext = 0;
+
+que.push_back( pTree );
+
+while (!que.empty()) {
+    Node *p = que.front();
+    que.pop_front();
+    nodesInCurr--;
+    if( p ){
+        p->flash();
+        que.push_back(p->_pLeft);
+        que.push_back(p->_pRight);
+        nodesInNext += 2;
+    }
+    if(nodesInCurr == 0){
+        nodesInCurr = nodesInNext;
+        nodesInNext = 0;
+    }
+}
+*/
 int numberOfNodes(Node *pTree){
     return (pTree == nullptr ? 0: 1 + numberOfNodes(pTree->_pLeft) + numberOfNodes(pTree->_pRight));
 }
 
 int height(Node *pTree){
-    pTree->flash();
     if(pTree == nullptr)
         return -1;
     int left = height(pTree->_pLeft);

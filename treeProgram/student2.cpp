@@ -15,7 +15,6 @@
  **************************************************************************/
 
 void insertKeyToSearchtree(Node*& pTree, int key){
-    pTree->flash();
     if(pTree == nullptr)
         pTree = new Node(key, nullptr, nullptr);
     else if (key < pTree->_key) {
@@ -48,7 +47,6 @@ Node* nodeWithMinimumKey(Node *pTree){
 }
 
 void removeKeyFromSearchtree(Node* &pTree, int key){
-    pTree->flash();
     if(pTree == nullptr)
         return;
     else if (key < pTree->_key) {

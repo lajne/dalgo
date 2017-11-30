@@ -13,6 +13,7 @@
 bool didIndicatePathToTarget(Node *pTree){
     if(pTree == nullptr)
         return false;
+    pTree->flash();
     if(pTree->isTarget()){
         pTree->makeRed();
         return true;
@@ -25,8 +26,7 @@ bool didIndicatePathToTarget(Node *pTree){
         pTree->makeRed();
         return true;
     }
-    didIndicatePathToTarget(pTree->_pLeft);
-    didIndicatePathToTarget(pTree->_pRight);
+    return false;
 }
 
 
