@@ -20,8 +20,8 @@ public:
 
     void push_back(float data)   { assert(_size<_capacity); _theArray[_size++] = data; }
 
-    iterator begin()  { return nullptr; } // TODO
-    iterator end()    { return nullptr; } // TODO
+    iterator begin()  { return _theArray; } // TODO
+    iterator end()    { return &_theArray[_size]; } // TODO
 
 
 };

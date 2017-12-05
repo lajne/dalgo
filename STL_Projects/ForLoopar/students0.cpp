@@ -26,8 +26,8 @@ void testMyFloatArr(){
         container.push_back( d );
 
     cout << "testMyFloatArr skriver ut:"<< endl;
-    for (MyFloatArr::iterator ite = container.begin(); ite != container.end(); ++ite)
-        cout << *ite << " " ;
+    for (auto ite : container)
+        cout << ite << " " ;
     cout << endl;
 }
 
@@ -40,8 +40,8 @@ void testMyFloatList(){
         container.push_back( d );
 
     cout << "testMyFloatList skriver ut:"<< endl;
-    for (MyFloatList::iterator ite = container.begin(); ite != container.end(); ++ite)
-           cout << *ite << " ";
+    for (auto ite : container)
+           cout << ite << " ";
     cout << endl;
 }
 
@@ -58,8 +58,8 @@ void testMyTemplateArr(){
 
     cout << "testMyTemplateArr skriver ut:"<< endl;
 
-    for (MyArr<string>::iterator ite = container.begin(); ite != container.end() ; ++ite)
-        cout <<  *ite << " ";
+    for (auto ite : container)
+        cout <<  ite << " ";
     cout << endl;
 
 }
@@ -75,8 +75,8 @@ void testMyTemplateList(){
 
     cout << "testMyTemplateList skriver ut:"<< endl;
 
-    for (MyList<string>::iterator ite = container.begin(); ite != container.end(); ++ite)
-        cout << *ite << " ";
+    for (auto ite : container)
+        cout << ite << " ";
     cout << endl;
 
 }

@@ -30,8 +30,8 @@ public:
         Link *_pLink;
 
         iterator(Link* pLink) { _pLink = pLink; }
-        iterator operator++(){  return *this;   } // TODO
-        bool operator!=(iterator rhs) { return true; } // TODO
+        iterator operator++(){  return (_pLink = _pLink->_pNext);   } // TODO
+        bool operator!=(iterator rhs) { return rhs._pLink != _pLink; } // TODO
          T& operator*()   { return _pLink->_data; }
 
     };
@@ -49,7 +49,7 @@ public:
 
 
 
-    iterator begin() { return iterator(nullptr); } // TODO fel kod, byt ut
+    iterator begin() { return iterator(_pFirst); } // TODO fel kod, byt ut
     iterator end()   { return iterator(nullptr); } // kanske TODO
 
 

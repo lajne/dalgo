@@ -16,9 +16,9 @@ class MyFloatList {
 public:
     struct iterator {
         iterator(Link* pLink) { _pLink = pLink; }
-        bool operator != (iterator rhs)   { return true; }  // TODO
+        bool operator != (iterator rhs)   { return rhs._pLink != _pLink; }  // TODO
         Link *_pLink;
-        iterator operator++() {return *this; } // TODO
+        iterator operator++() {return (_pLink = _pLink->_pNext); } // TODO
         float& operator*()  { return _pLink->_data; }
     };
 
@@ -40,7 +40,7 @@ public:
         }
     }
 
-    iterator begin() {  return iterator(nullptr); } // TODO fel kod, byt ut
+    iterator begin() {  return iterator(_pFirst); } // TODO fel kod, byt ut
     iterator end()   { return iterator(nullptr); }  // kanske TODO?
 
 };
